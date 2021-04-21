@@ -1,6 +1,6 @@
-package com.Kmylho.JuegoDeCarrosJava.entity;
+package com.Kmylho.JuegoDeCarrosJava.entity.values;
 
-import com.Kmylho.JuegoDeCarrosJava.entity.values.Puestos;
+import com.Kmylho.JuegoDeCarrosJava.entity.Jugador;
 
 public class Podio implements Puestos {
     private Jugador primerLugar;
@@ -8,7 +8,6 @@ public class Podio implements Puestos {
     private Jugador tercerLugar;
 
     public Podio() {
-        //constructor
     }
 
     public void asignarPrimerLugar(Jugador jugador) {
@@ -36,7 +35,11 @@ public class Podio implements Puestos {
     }
 
     public Boolean estaLleno() {
-        return this.primerLugar != null && this.segundoLugar != null && this.tercerLugar != null;
-    }
+        Boolean lleno = false;
+        if (this.primerLugar != null && this.segundoLugar != null && this.tercerLugar != null) {
+            lleno = true;
+        }
 
+        return lleno;
+    }
 }

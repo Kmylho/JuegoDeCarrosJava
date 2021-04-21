@@ -1,10 +1,8 @@
-package com.Kmylho.JuegoDeCarrosJava.entity;
-
-import com.Kmylho.JuegoDeCarrosJava.entity.values.Values;
+package com.Kmylho.JuegoDeCarrosJava.entity.values;
 
 public class Pista implements Values {
-    private final Integer kilometros;
-    private final Integer numeroDeCarriles;
+    private Integer kilometros;
+    private Integer numeroDeCarriles;
 
     public Pista(Integer kilometros, Integer numeroDeCarriles) {
         this.kilometros = kilometros;
